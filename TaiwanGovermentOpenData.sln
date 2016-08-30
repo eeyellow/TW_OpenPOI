@@ -3,9 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetData", "GetData\GetData.csproj", "{9D7A8274-4D6F-460F-8204-151977E2317C}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eeyellowUtility", "eeyellowUtility\eeyellowUtility.csproj", "{EA19331A-FFD1-4C83-8AC7-1A9F334BF1BC}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D7A8274-4D6F-460F-8204-151977E2317C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D7A8274-4D6F-460F-8204-151977E2317C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D7A8274-4D6F-460F-8204-151977E2317C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D7A8274-4D6F-460F-8204-151977E2317C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
