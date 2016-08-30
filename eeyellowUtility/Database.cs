@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Npgsql;
+using System.Data;
 
 namespace eeyellowUtility
 {
@@ -45,6 +46,15 @@ namespace eeyellowUtility
         public object ExecuteScalar()
         {
             return comm.ExecuteScalar();
+        }
+        public DataTable ExecuteDataTable()
+        {
+            DataTable dt = new DataTable();
+            using (NpgsqlDataAdapter sda = new NpgsqlDataAdapter(comm))
+            {
+                sda.Fill(dt);
+            }
+            return dt;
         }
     }
 }
