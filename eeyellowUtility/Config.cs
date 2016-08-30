@@ -56,7 +56,7 @@
             return result;
         }
         /// <summary>
-        /// 
+        /// 取得資料庫連線字串
         /// </summary>
         /// <param name="s"></param>
         /// <param name="t"></param>
@@ -67,7 +67,22 @@
             result += Get_DBServer(s) + Get_DBType(t) + Get_DBName(n);
             return result;
         }
-
+        /// <summary>
+        /// 取得OpenData URL網址
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string DataURL(URL url)
+        {
+            string result = "";
+            switch ((int)url)
+            {
+                case 0:
+                    result = "http://www.mohw.gov.tw/MOHW_Upload/doc/opendata/醫院基本資料.csv";
+                    break;
+            }
+            return result;
+        }
                 
         public enum DBServer
         {
@@ -83,6 +98,10 @@
         {
             TWPOI_Admin = 0,
             TWPOI_Guest = 1
+        }
+        public enum URL
+        {
+            Hospital = 0
         }
     }
 }
