@@ -14,7 +14,7 @@ namespace AddressLocator
         static void Main(string[] args)
         {
             Database db = new Database(Config.DBConnStr(Config.DBServer.localhost, Config.DBType.Postgres, Config.DBName.TWPOI_Admin));
-            db.setCommand("SELECT * FROM medical limit 10");
+            db.setCommand("SELECT * FROM medical");
             var dt = db.ExecuteDataTable();
             foreach(System.Data.DataRow dr in dt.Rows)
             {
