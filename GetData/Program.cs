@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Net;
 using System.IO;
-using System.Configuration;
 using eeyellowUtility;
 
 namespace GetData
@@ -12,9 +11,9 @@ namespace GetData
     {
         static void Main(string[] args)
         {
-            var listOfHospital = Utility.GetCSV(ConfigurationManager.AppSettings["URL_Hospital"]);
+            var listOfHospital = Utility.GetCSV(Config.DataURL(Config.URL.Hospital));
             
-            Database db = new Database(ConfigurationManager.ConnectionStrings["DB_TWPOI"].ToString());
+            Database db = new Database(Config.DBConnStr(Config.DBServer.localhost, Config.DBType.Postgres, Config.DBName.TWPOI_Admin));
             db.setCommand("SELECT id FROM medical_type WHERE name='醫院'");
             int type = (int)db.ExecuteScalar();
             for(int i = 1; i < listOfHospital.Count; i++)
