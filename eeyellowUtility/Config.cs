@@ -103,5 +103,16 @@
         {
             Hospital = 0
         }
+
+        /// <summary>
+        /// Google Map API Key
+        /// </summary>
+        public static string GoogleMapAPIKey
+        {
+            get
+            {
+                return "AIzaSyCk37rd2liQXTj6rqljh9Rk37fL7Aa4b6s";
+            }
+        }
     }
 }
