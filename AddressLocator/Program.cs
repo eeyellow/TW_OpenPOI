@@ -50,7 +50,7 @@ namespace AddressLocator
                             webRequest.Abort();
                             if (response != null) response.Dispose();
 
-                            webRequest = WebRequest.Create("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + dr["name"] + "&key=AIzaSyCk37rd2liQXTj6rqljh9Rk37fL7Aa4b6s") as HttpWebRequest;
+                            webRequest = WebRequest.Create("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + dr["name"] + "&key=" + Config.GoogleMapAPIKey) as HttpWebRequest;
                             response = webRequest.GetResponse() as HttpWebResponse;
                             if (response.StatusCode == HttpStatusCode.OK)
                             {
