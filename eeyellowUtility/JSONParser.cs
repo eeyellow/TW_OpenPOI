@@ -9,9 +9,14 @@ namespace eeyellowUtility
 {
     public static class JSONParser
     {
-        public static GAddrLoc GoogleAddressLocator(string jsonstr)
+        public static CGoogleAddressLocator.RootObject GoogleAddressLocator(string jsonstr)
         {
-            return JsonConvert.DeserializeObject<GAddrLoc>(jsonstr);
+            return JsonConvert.DeserializeObject<CGoogleAddressLocator.RootObject>(jsonstr);
+        }
+
+        public static CGoogleQueryText.RootObject GoogleQueryText(string jsonstr)
+        {
+            return JsonConvert.DeserializeObject<CGoogleQueryText.RootObject>(jsonstr);
         }
     }
 }
